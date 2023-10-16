@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Post from "./Post.astro";
+
+type Props = {
+  posts: CollectionEntry<"posts">[];
+};
+
+const { posts } = Astro.props;
+---
+
+<div class="flex flex-col space-y-14 mb-14">
+  {posts.map((post) => <Post post={post} />)}
+</div>

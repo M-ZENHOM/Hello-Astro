@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Main from "./Main.astro";
+import Logo from "../../public/Logo.png";
+---
+
+<header class="w-full py-20">
+  <Main className="flex items-center justify-between">
+    <Image src={Logo} alt="logo image" width={50} height={50} />
+    <ul class="space-x-4">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </ul>
+  </Main>
+</header>
